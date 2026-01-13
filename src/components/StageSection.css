@@ -19,11 +19,18 @@
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
   transition: all 0.3s ease;
   border: 4px solid white;
+  position: relative;
+  z-index: 2;
 }
 
 .stage-marker:hover {
   transform: scale(1.1);
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+}
+
+.stage-section.active .stage-marker {
+  transform: scale(1.15);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
 }
 
 .stage-name {
@@ -34,68 +41,15 @@
   text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
 }
 
-.stage-details {
+.tools-radial-container {
   position: absolute;
-  top: 100px;
+  top: 50%;
   left: 50%;
-  transform: translateX(-50%);
-  background: white;
-  border-radius: 12px;
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
-  padding: 20px;
-  min-width: 400px;
-  max-width: 500px;
-  max-height: 70vh;
-  overflow-y: auto;
-  animation: slideDown 0.3s ease;
+  width: 0;
+  height: 0;
+  pointer-events: none;
 }
 
-@keyframes slideDown {
-  from {
-    opacity: 0;
-    transform: translateX(-50%) translateY(-20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateX(-50%) translateY(0);
-  }
-}
-
-.stage-info h2 {
-  margin: 0 0 10px 0;
-  color: #2c3e50;
-  font-size: 1.5rem;
-}
-
-.stage-description {
-  color: #7f8c8d;
-  margin-bottom: 20px;
-  line-height: 1.5;
-}
-
-.tools-list h3 {
-  margin: 0 0 16px 0;
-  color: #2c3e50;
-  font-size: 1.2rem;
-  border-bottom: 2px solid #ecf0f1;
-  padding-bottom: 8px;
-}
-
-/* Scrollbar styling */
-.stage-details::-webkit-scrollbar {
-  width: 8px;
-}
-
-.stage-details::-webkit-scrollbar-track {
-  background: #f1f1f1;
-  border-radius: 4px;
-}
-
-.stage-details::-webkit-scrollbar-thumb {
-  background: #888;
-  border-radius: 4px;
-}
-
-.stage-details::-webkit-scrollbar-thumb:hover {
-  background: #555;
+.tools-radial-container > * {
+  pointer-events: auto;
 }
