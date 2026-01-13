@@ -1,0 +1,409 @@
+{
+  "stages": [
+    {
+      "id": "plan",
+      "name": "Plan",
+      "description": "Planning and requirements gathering phase",
+      "color": "#3498db",
+      "tools": [
+        {
+          "name": "Jira",
+          "description": "Project management and issue tracking",
+          "documentation": "https://www.atlassian.com/software/jira/guides",
+          "state": "production",
+          "sentiment": 4.2,
+          "slo": {
+            "availability": "99.9%",
+            "responseTime": "< 2s"
+          }
+        },
+        {
+          "name": "Confluence",
+          "description": "Documentation and collaboration",
+          "documentation": "https://www.atlassian.com/software/confluence/guides",
+          "state": "production",
+          "sentiment": 4.0,
+          "slo": {
+            "availability": "99.5%",
+            "responseTime": "< 3s"
+          }
+        }
+      ]
+    },
+    {
+      "id": "code",
+      "name": "Code",
+      "description": "Development and version control",
+      "color": "#e74c3c",
+      "tools": [
+        {
+          "name": "GitHub",
+          "description": "Version control and collaboration",
+          "documentation": "https://docs.github.com",
+          "state": "production",
+          "sentiment": 4.7,
+          "slo": {
+            "availability": "99.95%",
+            "responseTime": "< 1s"
+          }
+        },
+        {
+          "name": "VS Code",
+          "description": "Code editor and IDE",
+          "documentation": "https://code.visualstudio.com/docs",
+          "state": "production",
+          "sentiment": 4.8,
+          "slo": {
+            "availability": "99.99%",
+            "responseTime": "< 0.5s"
+          }
+        },
+        {
+          "name": "IntelliJ IDEA",
+          "description": "Integrated development environment for Java and other languages",
+          "documentation": "https://www.jetbrains.com/idea/documentation/",
+          "state": "production",
+          "sentiment": 4.6,
+          "slo": {
+            "availability": "99.9%",
+            "responseTime": "< 1s"
+          }
+        }
+      ]
+    },
+    {
+      "id": "build",
+      "name": "Build",
+      "description": "Continuous integration and build automation",
+      "color": "#9b59b6",
+      "tools": [
+        {
+          "name": "Jenkins",
+          "description": "Open source automation server for CI/CD",
+          "documentation": "https://www.jenkins.io/doc/",
+          "state": "production",
+          "sentiment": 4.1,
+          "slo": {
+            "availability": "99.5%",
+            "responseTime": "< 3s"
+          }
+        },
+        {
+          "name": "Google Cloud Build",
+          "description": "Serverless CI/CD platform on Google Cloud",
+          "documentation": "https://cloud.google.com/build/docs",
+          "state": "production",
+          "sentiment": 4.3,
+          "slo": {
+            "availability": "99.9%",
+            "responseTime": "< 4s"
+          }
+        },
+        {
+          "name": "HDPv2",
+          "description": "Home-grown deployment pipeline platform",
+          "documentation": "https://internal.docs/hdpv2",
+          "state": "production",
+          "sentiment": 3.8,
+          "slo": {
+            "availability": "99.0%",
+            "responseTime": "< 5s"
+          }
+        },
+        {
+          "name": "Stratus",
+          "description": "Home-grown build and deployment tool",
+          "documentation": "https://internal.docs/stratus",
+          "state": "production",
+          "sentiment": 3.9,
+          "slo": {
+            "availability": "99.2%",
+            "responseTime": "< 4s"
+          }
+        },
+        {
+          "name": "Nexus",
+          "description": "Repository manager for build artifacts and dependencies",
+          "documentation": "https://help.sonatype.com/repomanager3",
+          "state": "production",
+          "sentiment": 4.2,
+          "slo": {
+            "availability": "99.8%",
+            "responseTime": "< 2s"
+          }
+        },
+        {
+          "name": "Docker",
+          "description": "Containerization platform",
+          "documentation": "https://docs.docker.com",
+          "state": "production",
+          "sentiment": 4.6,
+          "slo": {
+            "availability": "99.95%",
+            "responseTime": "< 2s"
+          }
+        }
+      ]
+    },
+    {
+      "id": "test",
+      "name": "Test",
+      "description": "Automated testing and quality assurance",
+      "color": "#f39c12",
+      "tools": [
+        {
+          "name": "Jest",
+          "description": "JavaScript testing framework",
+          "documentation": "https://jestjs.io/docs/getting-started",
+          "state": "production",
+          "sentiment": 4.4,
+          "slo": {
+            "availability": "99.99%",
+            "responseTime": "< 1s"
+          }
+        },
+        {
+          "name": "Selenium",
+          "description": "Browser automation for testing",
+          "documentation": "https://www.selenium.dev/documentation",
+          "state": "production",
+          "sentiment": 4.1,
+          "slo": {
+            "availability": "99.5%",
+            "responseTime": "< 3s"
+          }
+        },
+        {
+          "name": "TOSCA",
+          "description": "Model-based test automation tool",
+          "documentation": "https://www.tricentis.com/products/tosca",
+          "state": "production",
+          "sentiment": 4.0,
+          "slo": {
+            "availability": "99.5%",
+            "responseTime": "< 4s"
+          }
+        },
+        {
+          "name": "SonarQube",
+          "description": "Test orchestration and code quality platform",
+          "documentation": "https://docs.sonarqube.org",
+          "state": "production",
+          "sentiment": 4.2,
+          "slo": {
+            "availability": "99.5%",
+            "responseTime": "< 4s"
+          }
+        }
+      ]
+    },
+    {
+      "id": "security",
+      "name": "Security",
+      "description": "Security scanning and vulnerability assessment",
+      "color": "#e67e22",
+      "tools": [
+        {
+          "name": "SonarQube",
+          "description": "Code quality and security analysis",
+          "documentation": "https://docs.sonarqube.org",
+          "state": "production",
+          "sentiment": 4.2,
+          "slo": {
+            "availability": "99.5%",
+            "responseTime": "< 4s"
+          }
+        },
+        {
+          "name": "Cyberflows",
+          "description": "Home-grown security orchestration tool",
+          "documentation": "https://internal.docs/cyberflows",
+          "state": "production",
+          "sentiment": 3.7,
+          "slo": {
+            "availability": "99.0%",
+            "responseTime": "< 6s"
+          }
+        }
+      ]
+    },
+    {
+      "id": "deploy",
+      "name": "Deploy",
+      "description": "Deployment and release management",
+      "color": "#1abc9c",
+      "tools": [
+        {
+          "name": "Kubernetes",
+          "description": "Container orchestration platform",
+          "documentation": "https://kubernetes.io/docs",
+          "state": "production",
+          "sentiment": 4.4,
+          "slo": {
+            "availability": "99.9%",
+            "responseTime": "< 2s"
+          }
+        },
+        {
+          "name": "Helm",
+          "description": "Kubernetes package manager",
+          "documentation": "https://helm.sh/docs",
+          "state": "production",
+          "sentiment": 4.3,
+          "slo": {
+            "availability": "99.5%",
+            "responseTime": "< 3s"
+          }
+        },
+        {
+          "name": "G3",
+          "description": "Home-grown deployment automation tool",
+          "documentation": "https://internal.docs/g3",
+          "state": "production",
+          "sentiment": 3.9,
+          "slo": {
+            "availability": "99.2%",
+            "responseTime": "< 5s"
+          }
+        },
+        {
+          "name": "HDPv2",
+          "description": "Home-grown deployment pipeline platform",
+          "documentation": "https://internal.docs/hdpv2",
+          "state": "production",
+          "sentiment": 3.8,
+          "slo": {
+            "availability": "99.0%",
+            "responseTime": "< 5s"
+          }
+        },
+        {
+          "name": "Stratus",
+          "description": "Home-grown build and deployment tool",
+          "documentation": "https://internal.docs/stratus",
+          "state": "production",
+          "sentiment": 3.9,
+          "slo": {
+            "availability": "99.2%",
+            "responseTime": "< 4s"
+          }
+        }
+      ]
+    },
+    {
+      "id": "operate",
+      "name": "Operate",
+      "description": "Operations and infrastructure management",
+      "color": "#16a085",
+      "tools": [
+        {
+          "name": "Terraform",
+          "description": "Infrastructure as code",
+          "documentation": "https://www.terraform.io/docs",
+          "state": "production",
+          "sentiment": 4.5,
+          "slo": {
+            "availability": "99.9%",
+            "responseTime": "< 2s"
+          }
+        },
+        {
+          "name": "Ansible",
+          "description": "Configuration management",
+          "documentation": "https://docs.ansible.com",
+          "state": "production",
+          "sentiment": 4.2,
+          "slo": {
+            "availability": "99.5%",
+            "responseTime": "< 3s"
+          }
+        },
+        {
+          "name": "GCP",
+          "description": "Google Cloud Platform",
+          "documentation": "https://cloud.google.com/docs",
+          "state": "production",
+          "sentiment": 4.5,
+          "slo": {
+            "availability": "99.95%",
+            "responseTime": "< 2s"
+          }
+        },
+        {
+          "name": "AWS",
+          "description": "Amazon Web Services cloud platform",
+          "documentation": "https://docs.aws.amazon.com",
+          "state": "production",
+          "sentiment": 4.6,
+          "slo": {
+            "availability": "99.99%",
+            "responseTime": "< 1s"
+          }
+        },
+        {
+          "name": "HIC",
+          "description": "Internal cloud platform",
+          "documentation": "https://internal.docs/hic",
+          "state": "production",
+          "sentiment": 3.8,
+          "slo": {
+            "availability": "99.5%",
+            "responseTime": "< 3s"
+          }
+        }
+      ]
+    },
+    {
+      "id": "monitor",
+      "name": "Monitor",
+      "description": "Monitoring, logging, and observability",
+      "color": "#27ae60",
+      "tools": [
+        {
+          "name": "Prometheus",
+          "description": "Metrics collection and alerting",
+          "documentation": "https://prometheus.io/docs",
+          "state": "production",
+          "sentiment": 4.6,
+          "slo": {
+            "availability": "99.9%",
+            "responseTime": "< 2s"
+          }
+        },
+        {
+          "name": "Grafana",
+          "description": "Metrics visualization and dashboards",
+          "documentation": "https://grafana.com/docs",
+          "state": "production",
+          "sentiment": 4.7,
+          "slo": {
+            "availability": "99.5%",
+            "responseTime": "< 3s"
+          }
+        },
+        {
+          "name": "Splunk",
+          "description": "Log management and analysis platform",
+          "documentation": "https://docs.splunk.com",
+          "state": "production",
+          "sentiment": 4.3,
+          "slo": {
+            "availability": "99.9%",
+            "responseTime": "< 3s"
+          }
+        },
+        {
+          "name": "OpenTelemetry",
+          "description": "Observability framework for traces, metrics, and logs",
+          "documentation": "https://opentelemetry.io/docs/",
+          "state": "production",
+          "sentiment": 4.4,
+          "slo": {
+            "availability": "99.5%",
+            "responseTime": "< 2s"
+          }
+        }
+      ]
+    }
+  ]
+}

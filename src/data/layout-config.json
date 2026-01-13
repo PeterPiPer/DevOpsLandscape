@@ -1,0 +1,36 @@
+{
+  "stages": [
+    {
+      "id": "plan",
+      "position": { "x": 30, "y": 50 }
+    },
+    {
+      "id": "code",
+      "position": { "x": 45, "y": 25 }
+    },
+    {
+      "id": "build",
+      "position": { "x": 70, "y": 25 }
+    },
+    {
+      "id": "test",
+      "position": { "x": 85, "y": 50 }
+    },
+    {
+      "id": "security",
+      "position": { "x": 85, "y": 75 }
+    },
+    {
+      "id": "deploy",
+      "position": { "x": 70, "y": 100 }
+    },
+    {
+      "id": "operate",
+      "position": { "x": 45, "y": 100 }
+    },
+    {
+      "id": "monitor",
+      "position": { "x": 30, "y": 75 }
+    }
+  ]
+}
