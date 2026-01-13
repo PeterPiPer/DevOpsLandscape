@@ -1,0 +1,90 @@
+.tool-node {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  cursor: pointer;
+  z-index: 20;
+  animation: toolNodeAppear 0.3s ease backwards;
+}
+
+@keyframes toolNodeAppear {
+  from {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0);
+  }
+  to {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+  }
+}
+
+.tool-node-inner {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+  border: 3px solid white;
+  position: relative;
+}
+
+.tool-node:hover .tool-node-inner {
+  transform: scale(1.2);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+}
+
+.tool-node-icon {
+  font-size: 1.5rem;
+  filter: brightness(1.2);
+}
+
+.tool-tooltip {
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-bottom: 12px;
+  padding: 8px 16px;
+  background: rgba(0, 0, 0, 0.9);
+  color: white;
+  border-radius: 6px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  white-space: nowrap;
+  pointer-events: none;
+  animation: tooltipAppear 0.2s ease;
+  z-index: 30;
+}
+
+.tool-tooltip::after {
+  content: '';
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  border: 6px solid transparent;
+  border-top-color: rgba(0, 0, 0, 0.9);
+}
+
+@keyframes tooltipAppear {
+  from {
+    opacity: 0;
+    transform: translateX(-50%) translateY(-5px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+  }
+}
+
+/* Stagger animation for multiple tool nodes */
+.tool-node:nth-child(1) { animation-delay: 0s; }
+.tool-node:nth-child(2) { animation-delay: 0.05s; }
+.tool-node:nth-child(3) { animation-delay: 0.1s; }
+.tool-node:nth-child(4) { animation-delay: 0.15s; }
+.tool-node:nth-child(5) { animation-delay: 0.2s; }
+.tool-node:nth-child(6) { animation-delay: 0.25s; }
+.tool-node:nth-child(7) { animation-delay: 0.3s; }
+.tool-node:nth-child(8) { animation-delay: 0.35s; }
