@@ -6,8 +6,9 @@ const ToolModal = ({ tool, stageColor, onClose }) => {
 
   const renderStars = (rating) => {
     const stars = [];
-    const fullStars = Math.floor(rating);
-    const hasHalfStar = rating % 1 >= 0.5;
+    const safeRating = rating || 0;
+    const fullStars = Math.floor(safeRating);
+    const hasHalfStar = safeRating % 1 >= 0.5;
     
     for (let i = 0; i < fullStars; i++) {
       stars.push(<span key={i} className="star filled">★</span>);
@@ -69,23 +70,29 @@ const ToolModal = ({ tool, stageColor, onClose }) => {
               <div className="sentiment-stars">
                 {renderStars(tool.sentiment)}
               </div>
-              <span className="sentiment-score">{tool.sentiment.toFixed(1)}/5.0</span>
+              <span className="sentiment-score">{tool.sentiment?.toFixed(1) || 'N/A'}/5.0</span>
             </div>
           </div>
           
-          <div className="modal-section">
-            <h3>Service Level Objectives</h3>
-            <div className="modal-slo">
-              <div className="slo-row">
-                <span className="slo-label">Availability:</span>
-                <span className="slo-value">{tool.slo.availability}</span>
-              </div>
-              <div className="slo-row">
-                <span className="slo-label">Response Time:</span>
-                <span className="slo-value">{tool.slo.responseTime}</span>
+          {tool.slo && (
+            <div className="modal-section">
+              <h3>Service Level Objectives</h3>
+              <div className="modal-slo">
+                {tool.slo.availability && (
+                  <div className="slo-row">
+                    <span className="slo-label">Availability:</span>
+                    <span className="slo-value">{tool.slo.availability}</span>
+                  </div>
+                )}
+                {tool.slo.responseTime && (
+                  <div className="slo-row">
+                    <span className="slo-label">Response Time:</span>
+                    <span className="slo-value">{tool.slo.responseTime}</span>
+                  </div>
+                )}
               </div>
             </div>
-          </div>
+          )}
           
           <div className="modal-actions">
             <a 

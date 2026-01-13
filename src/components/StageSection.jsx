@@ -5,12 +5,15 @@ import './StageSection.css';
 const StageSection = ({ stage, isActive, onClick, onToolClick }) => {
   // Calculate radial positions for tools
   const calculateToolPositions = () => {
-    const toolCount = stage.tools.length;
+    const tools = stage.tools || [];
+    const toolCount = tools.length;
+    if (toolCount === 0) return [];
+    
     const radius = 120; // Distance from stage center
     const angleStep = 360 / toolCount;
     const startAngle = -90; // Start from top
     
-    return stage.tools.map((tool, index) => ({
+    return tools.map((tool, index) => ({
       tool,
       angle: startAngle + (angleStep * index),
       distance: radius,
@@ -44,6 +47,7 @@ const StageSection = ({ stage, isActive, onClick, onToolClick }) => {
               angle={position.angle}
               distance={position.distance}
               stageColor={stage.color}
+              stageId={stage.id}
               onClick={onToolClick}
             />
           ))}
