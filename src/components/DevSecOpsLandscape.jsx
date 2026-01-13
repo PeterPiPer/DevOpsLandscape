@@ -1,11 +1,23 @@
-import React, { useState } from 'react';
+import React, { useState, useMemo } from 'react';
 import InfinitySymbol from './InfinitySymbol';
 import StageSection from './StageSection';
 import devSecOpsData from '../data/devsecops-data.json';
+import layoutConfig from '../data/layout-config.json';
 import './DevSecOpsLandscape.css';
 
 const DevSecOpsLandscape = () => {
   const [activeStage, setActiveStage] = useState(null);
+
+  // Merge stage data with layout configuration
+  const stages = useMemo(() => {
+    return devSecOpsData.stages.map(stage => {
+      const layout = layoutConfig.stages.find(l => l.id === stage.id);
+      return {
+        ...stage,
+        position: layout ? layout.position : { x: 50, y: 50 }
+      };
+    });
+  }, []);
 
   const handleStageClick = (stageId) => {
     setActiveStage(activeStage === stageId ? null : stageId);
@@ -27,7 +39,7 @@ const DevSecOpsLandscape = () => {
       <div className="landscape-container">
         <InfinitySymbol />
         
-        {devSecOpsData.stages.map((stage) => (
+        {stages.map((stage) => (
           <StageSection
             key={stage.id}
             stage={stage}
