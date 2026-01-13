@@ -1,0 +1,252 @@
+{
+  "stages": [
+    {
+      "id": "plan",
+      "name": "Plan",
+      "description": "Planning and requirements gathering phase",
+      "position": { "x": 30, "y": 50 },
+      "color": "#3498db",
+      "tools": [
+        {
+          "name": "Jira",
+          "description": "Project management and issue tracking",
+          "documentation": "https://www.atlassian.com/software/jira/guides",
+          "state": "production",
+          "sentiment": 4.2,
+          "slo": {
+            "availability": "99.9%",
+            "responseTime": "< 2s"
+          }
+        },
+        {
+          "name": "Confluence",
+          "description": "Documentation and collaboration",
+          "documentation": "https://www.atlassian.com/software/confluence/guides",
+          "state": "production",
+          "sentiment": 4.0,
+          "slo": {
+            "availability": "99.5%",
+            "responseTime": "< 3s"
+          }
+        }
+      ]
+    },
+    {
+      "id": "code",
+      "name": "Code",
+      "description": "Development and version control",
+      "position": { "x": 45, "y": 25 },
+      "color": "#e74c3c",
+      "tools": [
+        {
+          "name": "GitHub",
+          "description": "Version control and collaboration",
+          "documentation": "https://docs.github.com",
+          "state": "production",
+          "sentiment": 4.7,
+          "slo": {
+            "availability": "99.95%",
+            "responseTime": "< 1s"
+          }
+        },
+        {
+          "name": "VS Code",
+          "description": "Code editor and IDE",
+          "documentation": "https://code.visualstudio.com/docs",
+          "state": "production",
+          "sentiment": 4.8,
+          "slo": {
+            "availability": "99.99%",
+            "responseTime": "< 0.5s"
+          }
+        }
+      ]
+    },
+    {
+      "id": "build",
+      "name": "Build",
+      "description": "Continuous integration and build automation",
+      "position": { "x": 70, "y": 25 },
+      "color": "#9b59b6",
+      "tools": [
+        {
+          "name": "GitHub Actions",
+          "description": "CI/CD automation platform",
+          "documentation": "https://docs.github.com/actions",
+          "state": "production",
+          "sentiment": 4.5,
+          "slo": {
+            "availability": "99.9%",
+            "responseTime": "< 5s"
+          }
+        },
+        {
+          "name": "Docker",
+          "description": "Containerization platform",
+          "documentation": "https://docs.docker.com",
+          "state": "production",
+          "sentiment": 4.6,
+          "slo": {
+            "availability": "99.95%",
+            "responseTime": "< 2s"
+          }
+        }
+      ]
+    },
+    {
+      "id": "test",
+      "name": "Test",
+      "description": "Automated testing and quality assurance",
+      "position": { "x": 85, "y": 50 },
+      "color": "#f39c12",
+      "tools": [
+        {
+          "name": "Jest",
+          "description": "JavaScript testing framework",
+          "documentation": "https://jestjs.io/docs/getting-started",
+          "state": "production",
+          "sentiment": 4.4,
+          "slo": {
+            "availability": "99.99%",
+            "responseTime": "< 1s"
+          }
+        },
+        {
+          "name": "Selenium",
+          "description": "Browser automation for testing",
+          "documentation": "https://www.selenium.dev/documentation",
+          "state": "production",
+          "sentiment": 4.1,
+          "slo": {
+            "availability": "99.5%",
+            "responseTime": "< 3s"
+          }
+        }
+      ]
+    },
+    {
+      "id": "security",
+      "name": "Security",
+      "description": "Security scanning and vulnerability assessment",
+      "position": { "x": 85, "y": 75 },
+      "color": "#e67e22",
+      "tools": [
+        {
+          "name": "Snyk",
+          "description": "Security scanning for dependencies",
+          "documentation": "https://docs.snyk.io",
+          "state": "production",
+          "sentiment": 4.3,
+          "slo": {
+            "availability": "99.9%",
+            "responseTime": "< 5s"
+          }
+        },
+        {
+          "name": "SonarQube",
+          "description": "Code quality and security analysis",
+          "documentation": "https://docs.sonarqube.org",
+          "state": "production",
+          "sentiment": 4.2,
+          "slo": {
+            "availability": "99.5%",
+            "responseTime": "< 4s"
+          }
+        }
+      ]
+    },
+    {
+      "id": "deploy",
+      "name": "Deploy",
+      "description": "Deployment and release management",
+      "position": { "x": 70, "y": 100 },
+      "color": "#1abc9c",
+      "tools": [
+        {
+          "name": "Kubernetes",
+          "description": "Container orchestration platform",
+          "documentation": "https://kubernetes.io/docs",
+          "state": "production",
+          "sentiment": 4.4,
+          "slo": {
+            "availability": "99.9%",
+            "responseTime": "< 2s"
+          }
+        },
+        {
+          "name": "Helm",
+          "description": "Kubernetes package manager",
+          "documentation": "https://helm.sh/docs",
+          "state": "production",
+          "sentiment": 4.3,
+          "slo": {
+            "availability": "99.5%",
+            "responseTime": "< 3s"
+          }
+        }
+      ]
+    },
+    {
+      "id": "operate",
+      "name": "Operate",
+      "description": "Operations and infrastructure management",
+      "position": { "x": 45, "y": 100 },
+      "color": "#16a085",
+      "tools": [
+        {
+          "name": "Terraform",
+          "description": "Infrastructure as code",
+          "documentation": "https://www.terraform.io/docs",
+          "state": "production",
+          "sentiment": 4.5,
+          "slo": {
+            "availability": "99.9%",
+            "responseTime": "< 2s"
+          }
+        },
+        {
+          "name": "Ansible",
+          "description": "Configuration management",
+          "documentation": "https://docs.ansible.com",
+          "state": "production",
+          "sentiment": 4.2,
+          "slo": {
+            "availability": "99.5%",
+            "responseTime": "< 3s"
+          }
+        }
+      ]
+    },
+    {
+      "id": "monitor",
+      "name": "Monitor",
+      "description": "Monitoring, logging, and observability",
+      "position": { "x": 30, "y": 75 },
+      "color": "#27ae60",
+      "tools": [
+        {
+          "name": "Prometheus",
+          "description": "Metrics collection and alerting",
+          "documentation": "https://prometheus.io/docs",
+          "state": "production",
+          "sentiment": 4.6,
+          "slo": {
+            "availability": "99.9%",
+            "responseTime": "< 2s"
+          }
+        },
+        {
+          "name": "Grafana",
+          "description": "Metrics visualization and dashboards",
+          "documentation": "https://grafana.com/docs",
+          "state": "production",
+          "sentiment": 4.7,
+          "slo": {
+            "availability": "99.5%",
+            "responseTime": "< 3s"
+          }
+        }
+      ]
+    }
+  ]
+}
